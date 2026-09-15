@@ -1,0 +1,254 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    line-height:1.6;
+    color:#222;
+    background:#fff;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.header{
+    background:#111;
+    padding:15px 0;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo img{
+    width:120px;
+}
+
+.nav-menu{
+    display:flex;
+    gap:25px;
+}
+
+.nav-menu a{
+    color:#fff;
+    text-decoration:none;
+}
+
+.nav-menu a:hover,
+.nav-menu .active{
+    color:#00bfff;
+}
+
+.nav-actions button{
+    background:none;
+    border:0;
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+}
+
+#menuToggle{
+    display:none;
+}
+
+.hero{
+    min-height:80vh;
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+}
+
+.hero-content{
+    width:100%;
+}
+
+.hero h1,
+.page-hero h1{
+    font-size:45px;
+}
+
+.hero span,
+.page-hero span,
+.section h2 span{
+    color:#00bfff;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    margin:10px;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.btn-primary{
+    background:#00bfff;
+    color:#fff;
+}
+
+.btn-secondary{
+    border:1px solid #00bfff;
+    color:#00bfff;
+}
+
+.page-hero{
+    padding:80px 0;
+    text-align:center;
+    background:#111;
+    color:#fff;
+}
+
+.section{
+    padding:70px 0;
+}
+
+.section h2{
+    margin-bottom:25px;
+}
+
+.service-grid,
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.service-card,
+.project-card,
+.contact-form,
+.contact-info{
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 20px #ddd;
+}
+
+.service-card:hover,
+.project-card:hover{
+    transform:translateY(-5px);
+    transition:.3s;
+}
+
+.project-card img{
+    width:100%;
+    border-radius:8px;
+}
+
+.project-card h3{
+    margin:10px 0;
+}
+
+.filter-buttons{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.filter-buttons button{
+    padding:10px 18px;
+    margin:5px;
+    cursor:pointer;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:8px;
+    border:1px solid #ccc;
+}
+
+.contact-form small{
+    color:red;
+    display:block;
+}
+
+.contact-item{
+    margin:20px 0;
+}
+
+.footer{
+    background:#111;
+    color:#fff;
+    text-align:center;
+    padding:30px;
+}
+
+.footer-logo{
+    width:100px;
+}
+
+.back-to-top{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    display:none;
+    padding:12px;
+    cursor:pointer;
+}
+
+/* Dark Mode */
+body.dark{
+    background:#181818;
+    color:#fff;
+}
+
+body.dark .service-card,
+body.dark .project-card,
+body.dark .contact-form,
+body.dark .contact-info{
+    background:#252525;
+    box-shadow:none;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+    .nav-menu{
+        display:none;
+        flex-direction:column;
+        width:100%;
+        padding:20px 0;
+    }
+
+    .navbar.open .nav-menu{
+        display:flex;
+    }
+
+    #menuToggle{
+        display:inline-block;
+    }
+
+    .navbar{
+        flex-wrap:wrap;
+    }
+
+    .service-grid,
+    .project-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1,
+    .page-hero h1{
+        font-size:32px;
+    }
+}
